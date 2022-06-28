@@ -6,11 +6,11 @@ class Game {
   constructor() {
     this.missed = 0; //missed property will track number of missed guesses
     this.phrases = [
-      { phrase: "Hello World" },
-      { phrase: "Pull yourself together" },
-      { phrase: "That is the last straw" },
-      { phrase: "Time flies when you are having fun" },
-      { phrase: "We will cross that bridge when we come to it" },
+       new Phrase ( "Hello World") ,
+       new Phrase ("Pull yourself together" ),
+       new Phrase ( "That is the last straw" ),
+       new Phrase ( "Time flies when you are having fun" ),
+       new Phrase ( "We will cross that bridge when we come to it" ),
     ]; // phrase property will hold an array of objects
     this.activePhrase = null; // The activePhrase property will hold the current
   }
@@ -36,7 +36,7 @@ class Game {
   handleInteraction(button) {
     // console.log(button)
     let buttonPressed = button.textContent;// Captured the text.Content of the button element and plugged it into variable
-    button.disbabled = "true";// disabled the button
+    button.disabled = "true";// disabled the button
 
     // Created an if statement which checked to see if the active phrase included the letter/button being pressed
     if (this.activePhrase.phrase.includes(buttonPressed)) {
